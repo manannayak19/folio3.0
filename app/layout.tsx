@@ -1,3 +1,5 @@
+"use client"
+
 import localFont from 'next/font/local'
 import "./globals.css";
 import Link from 'next/link';
@@ -10,7 +12,9 @@ const bluescreen = localFont({
   src: '../public/bluescreen.ttf'
 })
 
-
+const hackedcrt = localFont({
+  src : '../public/hackedcrt.ttf'
+})
 
 export default function RootLayout({
   children,
@@ -18,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const [selectedTab, setSelectedTab] = useState(tabs[0])
+  //const [selectedTab, setSelectedTab] = useState(tabs[0])
   return (
     <html lang="en">
       <body
@@ -26,7 +30,7 @@ export default function RootLayout({
       >
         <div>
           <div className='flex'>
-            <aside className='w-50 p-4 border-r'>
+            <aside className='w-min p-3 text-2xl'>
               
               <nav>
                 <ul>
@@ -45,7 +49,8 @@ export default function RootLayout({
             </aside>
           </div>
         </div>
-        <div className="flex-1 p-5">{children}</div>
+        <div className="flex w-screen items-center-safe justify-center">{children}</div>
+        <footer className={`${hackedcrt.className}`}>portfolio</footer>
       </body>
     </html>
   );
