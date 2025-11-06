@@ -1,56 +1,54 @@
-"use client"
+//"use client";
 
-import localFont from 'next/font/local'
+import { Bitcount_Grid_Single } from "next/font/google";
+import { Courier_Prime } from "next/font/google";
 import "./globals.css";
-import Link from 'next/link';
+import Link from "next/link";
 
-import { AnimatePresence } from "motion/react"
-import * as motion from "motion/react-client"
-import { useState } from "react"
+const btc = Bitcount_Grid_Single({
+  weight: "500",
+});
 
-const bluescreen = localFont({
-  src: '../public/bluescreen.ttf'
-})
-
-const hackedcrt = localFont({
-  src : '../public/hackedcrt.ttf'
-})
+const courier = Courier_Prime({
+  weight: "400",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  //const [selectedTab, setSelectedTab] = useState(tabs[0])
   return (
     <html lang="en">
-      <body
-        className={`${bluescreen.className} antialiased flex flex-row`}
-      >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body className={`${btc.className}`}>
         <div>
-          <div className='flex'>
-            <aside className='w-min p-3 text-2xl'>
-              
-              <nav>
-                <ul>
-                  <Link href={"/about"}>about</Link>
-                </ul>
-                <ul>
-                  <Link href={"/resume"}>resume</Link>
-                </ul>
-                <ul>
-                  <Link href={"/contact"}>contact</Link>
-                </ul>
-                <ul>
-                  <Link href={"/good-reads"}>good reads</Link>
+          <div className="">
+            <aside className="m-3">
+              <nav className="transition delay-150 duration-300 ease-in ">
+                <ul className=" flex flex-row gap-6 p-3 border-b-2 md:text-2xl text-xl">
+                  <li className="hover:-translate-y-1 hover:scale-110">
+                    <Link href={"/"}>home</Link>
+                  </li>
+                  <li className="hover:-translate-y-1 hover:scale-110">
+                    <Link href={"/resume"}>resume</Link>
+                  </li>
+                  {/* <li className="hover:-translate-y-1 hover:scale-110">
+                    <Link href={"/contact"}>contact</Link>
+                  </li> */}
+                  <li className="hover:-translate-y-1 hover:scale-110">
+                    <Link href={"/good-reads"}>good reads</Link>
+                  </li>
                 </ul>
               </nav>
             </aside>
           </div>
         </div>
-        <div className="flex w-screen items-center-safe justify-center">{children}</div>
-        <footer className={`${hackedcrt.className}`}>portfolio</footer>
+        <main className={` ${courier.className} p-4 m-2 md:h-screen`}>
+          {children}
+        </main>
       </body>
     </html>
   );

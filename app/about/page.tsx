@@ -1,11 +1,7 @@
-
-
-export default function Page(){
-    return(
-        <div className="content-center">
-            
-            about me everything aboutme  boaut me
-            
-        </div>
-    )
+export default function Page() {
+  return (
+      <>
+      <div className="text-4xl">about me</div>
+      </>
+  );
 }

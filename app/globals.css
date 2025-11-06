@@ -1,6 +1,26 @@
 @import "tailwindcss";
 
+/* orange background */
+/* :root {
+  --background: #F86624;
+  --foreground: #002626;
+} */
+/* :root {
+  --background: #FFFDED;
+  --foreground: #363537;
+} */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FDFDFF;
+  --foreground: #0000F5;
+}
+
+/* EEE82C */
+/* 0C0E1D */
+/* 19381F */
+/* green - EEE82C */
+
+body{
+  background-color: var(--background);
+  color: var(--foreground);
 }
