@@ -1,5 +1,4 @@
-import { Bitcount_Grid_Single } from "next/font/google";
-import Image from "next/image";
+import { Bitcount_Grid_Single, Poppins } from "next/font/google";
 
 const btc = Bitcount_Grid_Single({
   weight: "500",
