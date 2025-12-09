@@ -1,4 +1,5 @@
 //"use client";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next";
 import {  Courier_Prime,Poppins } from "next/font/google";
 import "./globals.css";
@@ -19,7 +20,7 @@ const courier = Courier_Prime({
 });
 
 export const metadata: Metadata = {
-  title: "Manan Nayak personal website"
+  title: "Manan Nayak 3.0"
 }
 
 export default function RootLayout({
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${poppinsFont.variable} ${courier.variable} antialiased`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
