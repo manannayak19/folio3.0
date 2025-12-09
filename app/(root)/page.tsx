@@ -7,7 +7,6 @@ import { Poppins } from "next/font/google";
 import {
   SiMongodb,
   SiJavascript,
-  SiRedis,
   SiNodedotjs,
   SiExpress,
   SiTypescript,
@@ -15,7 +14,7 @@ import {
   SiNextdotjs,
   SiPython,
 } from "react-icons/si";
-import { FileText, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { PROJECTS, SOCIAL_LINKS } from "../lib/constants";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ReactLenis from "lenis/react";
