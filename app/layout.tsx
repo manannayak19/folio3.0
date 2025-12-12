@@ -3,6 +3,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next";
 import {  Courier_Prime,Poppins } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+
 //import Link from "next/link";
 
 // const btc = Bitcount_Grid_Single({
@@ -35,6 +37,7 @@ export default function RootLayout({
       >
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
